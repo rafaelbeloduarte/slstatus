@@ -6,6 +6,7 @@
 #include <string.h>
 #include <time.h>
 #include <X11/Xlib.h>
+#include <locale.h> // para usar a função setlocale
 
 #include "arg.h"
 #include "slstatus.h"
@@ -47,6 +48,7 @@ usage(void)
 int
 main(int argc, char *argv[])
 {
+	setlocale(LC_ALL, ""); // quando deixa-se o segundo argumento vazio a função pega a linguagem do sistema
 	struct sigaction act;
 	struct timespec start, current, diff, intspec, wait;
 	size_t i, len;
