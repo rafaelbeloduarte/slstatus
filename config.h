@@ -67,7 +67,7 @@ static const struct arg args[] = {
 	/* function format          argument */
 	{ keymap, 	"%s", 	NULL },
 	{ separator, 	"%s", 	" " },
-	{ vol_perc, 	"Vol:%s%%",   "/dev/mixer" },
+	{ vol_perc, 	"vol:%s%%",   "/dev/mixer" },
 	{ separator, 	"%s", 	" " },
 	{ datetime, 	"%s",   "%a %d/%m %H:%M" },
 };
