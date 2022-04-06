@@ -70,5 +70,7 @@ static const struct arg args[] = {
 	{ separator, 	"%s", 	      " " },
 	{ vol_perc, 	"%s%%",       "/dev/mixer" },
 	{ separator, 	"%s", 	      " " },
+  { temp,       "%sºC",       "/sys/class/hwmon/hwmon2/temp1_input"},
+	{ separator, 	"%s", 	      " " },
 	{ datetime, 	"%s",         "%a %d/%m %H:%M" },
 };
