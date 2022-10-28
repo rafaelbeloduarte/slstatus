@@ -59,13 +59,9 @@ static const char unknown_str[] = "n/a";
  * uptime              system uptime                   NULL
  * username            username of current user        NULL
  * vol_perc            OSS/ALSA volume in percent      mixer file (/dev/mixer)
- /*
- Create a file called /etc/modules-load.d/modules.conf with the following content:
-
-    snd-pcm-oss
-
-Reboot and /dev/mixer should appear.
-*/
+ * Create a file called /etc/modules-load.d/modules.conf with the following content:
+ *   snd-pcm-oss
+ * Reboot and /dev/mixer should appear.
  *                                                     NULL on OpenBSD/FreeBSD
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
