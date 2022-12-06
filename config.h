@@ -1,5 +1,8 @@
 /* See LICENSE file for copyright and license details. */
-
+/*
+asdasdasds
+sdassdsa
+*/
 /* interval between updates (in ms) */
 const unsigned int interval = 1000;
 
@@ -70,7 +73,9 @@ static const struct arg args[] = {
 	{ separator, 	"%s", 	      " " },
 	{ vol_perc, 	"%s%%",       "/dev/mixer" },
 	{ separator, 	"%s", 	      " " },
-  { temp,       "%sºC",       "/sys/class/hwmon/hwmon2/temp1_input"},
+  { temp,       "CPU %sºC",       "/sys/class/hwmon/hwmon2/temp1_input"},
+	{ separator, 	"%s", 	      " " },
+  { run_command,"GPU %sºC",      "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader"},
 	{ separator, 	"%s", 	      " " },
 	{ datetime, 	"%s",         "%a %d/%m %H:%M" },
 };
