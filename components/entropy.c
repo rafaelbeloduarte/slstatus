@@ -6,15 +6,15 @@
 
 	#include "../util.h"
 
+	#define ENTROPY_AVAIL "/proc/sys/kernel/random/entropy_avail"
+
 	const char *
 	entropy(const char *unused)
 	{
 		uintmax_t num;
 
-		if (pscanf("/proc/sys/kernel/random/entropy_avail", "%ju", &num)
-		    != 1) {
+		if (pscanf(ENTROPY_AVAIL, "%ju", &num) != 1)
 			return NULL;
-		}
 
 		return bprintf("%ju", num);
 	}
@@ -22,7 +22,8 @@
 	const char *
 	entropy(const char *unused)
 	{
+		// https://www.unicode.org/charts/PDF/U2200.pdf
 		/* Unicode Character 'INFINITY' (U+221E) */
-		return "\xe2\x88\x9e";
+		return "\u221E";
 	}
 #endif
