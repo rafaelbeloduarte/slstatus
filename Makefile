@@ -7,6 +7,7 @@ include config.mk
 REQ = util
 COM =\
 	components/battery\
+	components/cat\
 	components/cpu\
 	components/datetime\
 	components/disk\
@@ -21,7 +22,6 @@ COM =\
 	components/num_files\
 	components/ram\
 	components/run_command\
-	components/separator\
 	components/swap\
 	components/temperature\
 	components/uptime\

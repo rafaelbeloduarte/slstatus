@@ -2,8 +2,11 @@
 
 /* battery */
 const char *battery_perc(const char *);
-const char *battery_state(const char *);
 const char *battery_remaining(const char *);
+const char *battery_state(const char *);
+
+/* cat */
+const char *cat(const char *path);
 
 /* cpu */
 const char *cpu_freq(const char *unused);
@@ -56,9 +59,6 @@ const char *ram_used(const char *unused);
 /* run_command */
 const char *run_command(const char *cmd);
 
-/* separator */
-const char *separator(const char *separator);
-
 /* swap */
 const char *swap_free(const char *unused);
 const char *swap_perc(const char *unused);
@@ -73,12 +73,12 @@ const char *uptime(const char *unused);
 
 /* user */
 const char *gid(const char *unused);
-const char *username(const char *unused);
 const char *uid(const char *unused);
+const char *username(const char *unused);
 
 /* volume */
 const char *vol_perc(const char *card);
 
 /* wifi */
-const char *wifi_perc(const char *interface);
 const char *wifi_essid(const char *interface);
+const char *wifi_perc(const char *interface);
