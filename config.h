@@ -71,18 +71,11 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ separator, 	"%s", 	      " " },
-	{ keymap, 	  "%s", 	      NULL },
-	{ separator, 	"%s", 	      " " },
-	{ vol_perc, 	"%s%%",       "/dev/mixer" },
-	{ separator, 	"%s", 	      " " },
-  { netspeed_rx, "D %s",     "enp0s31f6"},
-	{ separator, 	"%s", 	      " " },
-  { netspeed_tx, "U %s",     "enp0s31f6"},
-	{ separator, 	"%s", 	      " " },
-  { temp,       "CPU %sºC",       "/sys/class/hwmon/hwmon2/temp1_input"},
-	{ separator, 	"%s", 	      " " },
-  { run_command,"GPU %sºC",      "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader"},
-	{ separator, 	"%s", 	      " " },
+	{ keymap, 	  "%s ", 	      NULL },
+	{ vol_perc, 	"%s%% ",       "/dev/mixer" },
+  { netspeed_rx, "D %s ",     "enp0s31f6"},
+  { netspeed_tx, "U %s ",     "enp0s31f6"},
+  { temp,       "CPU %sºC ",       "/sys/class/hwmon/hwmon2/temp1_input"},
+  { run_command,"GPU %sºC ",      "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader"},
 	{ datetime, 	"%s",         "%a %d/%m %H:%M" },
 };
