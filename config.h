@@ -75,7 +75,7 @@ static const struct arg args[] = {
 	{ vol_perc, 	"%s%% ",       "/dev/mixer" },
   { netspeed_rx, "D %s ",     "enp0s31f6"},
   { netspeed_tx, "U %s ",     "enp0s31f6"},
-  { run_command,"CPU %s ",      "sensors | awk '/^Package/ {print $4}'"},
+  { run_command,"CPU %s ",      "sensors | awk '/^Package/ {print $4}' | sed 's/+//'"},
   { run_command,"GPU %sºC ",      "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader"},
 	{ datetime, 	"%s",         "%a %d/%m %H:%M" },
 };
