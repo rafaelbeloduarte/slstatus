@@ -71,8 +71,9 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ keymap, 	  "%s ", 	      NULL },
-	{ run_command,"%s%% ",       "wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '/^Volume:/ {print $2}' | sed 's/0.//'" },
+	{ keymap, 	   "%s ", 	    NULL },
+	//{ vol_perc, 	  "%s ", 	  "/dev/mixer" },
+	{ run_command, "Vol. %s ",  "wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '/^Volume:/ {print $2}'" },
   { netspeed_rx, "D %s ",     "enp0s31f6"},
   { netspeed_tx, "U %s ",     "enp0s31f6"},
   { run_command,"CPU %s ",      "sensors | awk '/^Package/ {print $4}' | sed 's/+//'"},
