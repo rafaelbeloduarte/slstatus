@@ -73,10 +73,10 @@ static const struct arg args[] = {
 	/* function format          argument */
 	{ keymap, 	   " %s ", 	    NULL },
 	//{ vol_perc, 	  "%s ", 	  "/dev/mixer" },
-	{ run_command, "Vol. %s ",  "wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '/^Volume:/ {print $2}'" },
-  { netspeed_rx, "D %s ",     "enp0s31f6"},
-  { netspeed_tx, "U %s ",     "enp0s31f6"},
-  { run_command,"CPU %s ",      "sensors | awk '/^Package/ {print $4}' | sed 's/+//'"},
-  { run_command,"GPU %sºC ",      "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader"},
+	{ run_command, " %s ",  "wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '/^Volume:/ {print $2}'" },
+  { netspeed_rx, " %s ",     "enp0s31f6"},
+  { netspeed_tx, " %s ",     "enp0s31f6"},
+  { run_command," %s ",      "sensors | awk '/^Package/ {print $4}' | sed 's/+//'"},
+  { run_command," %sºC ",      "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader"},
 	{ datetime, 	"%s",         "%a %d/%m %H:%M" },
 };
