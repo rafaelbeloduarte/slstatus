@@ -76,6 +76,7 @@ static const struct arg args[] = {
 	{ run_command, " %s ",  "wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '/^Volume:/ {print $2}'" },
   { netspeed_rx, " %s ",     "enp0s31f6"},
   { netspeed_tx, " %s ",     "enp0s31f6"},
+  { ram_perc,    " %s%% ",   NULL},
   { run_command," %s ",      "sensors | awk '/^Package/ {print $4}' | sed 's/+//'"},
   { run_command," %sºC ",      "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader"},
 	{ datetime, 	"%s",         "%a %d/%m %H:%M" },
